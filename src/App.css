@@ -1,0 +1,511 @@
+/* Loginpagr */
+
+body{
+  margin: 0;
+  padding: 0;
+}
+p{
+  margin: 0;
+  padding: 0;
+}
+
+div{
+  margin: 0;
+  padding: 0;
+}
+
+.body{
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  padding-top: 10px;
+  padding-bottom: 20px;
+  
+}
+.main-body{
+  display: flex;
+  flex-direction: row;
+  justify-content: space-between;
+  box-shadow: 0px 0px 5px 1px rgba(0,0,0,0.75);
+
+  height: 560px;
+  width: 1000px;
+  
+}
+.Img{
+  height: 560px;
+  width: 500px;
+}
+.Login-img{
+  height: 560px;
+  width: 500px;
+}
+.login-box{
+  display: flex;
+  flex-direction: column;
+  height: 560px;
+  width: 500px;
+  justify-content: top;
+  align-items: center;
+
+}
+label,input{
+  display: block;
+ 
+}
+.image{
+  margin-left: -250px;
+  margin-top: 20px;
+}
+.login-text{
+  font-size: 30px;
+  font-weight: bold;
+  line-height: 5px;
+  margin-bottom: 0px;
+}
+.under-login-text{
+  margin-top: 24px;
+  padding-top: 0px;
+  color: gray;
+}
+.google-img{
+  width: 15px;
+  height: 15px;
+  margin-right: 10px;
+}
+.google-login{
+  height: 35px;
+  width: 300px;
+  border-width: 1px;
+  border-color: gray;
+  border-style: solid;
+  border-radius: 17px;
+  font-weight: bold;
+}
+.input-box{
+  height: 30px;
+  width: 295px;
+  border-radius: 15px;
+  border-style: solid;
+  border-color: gray;
+  border-width: 1px;
+  padding-left: 15px;
+}
+.google-login-button{
+  align-items: center;
+  justify-content: center;
+  display: flex;
+}
+.email-box{
+  margin-top: 20px;
+  margin-bottom: 20px;
+}
+.pass-box{
+  margin-top: 20px;
+
+}
+.forgat-box{
+  display: flex;
+  flex-direction: row;
+  align-items: center;
+  justify-content: space-between;
+}
+.checkbox{
+  display: inline;
+}
+
+
+
+
+/* Navbar.css */
+.navbar {
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+  vertical-align: top;
+  padding: 0 20px;
+  background-color: #797EF6;
+  box-shadow: 0 2px 4px rgba(0, 0, 0, 0.1);
+  padding-top: 10px;
+  padding-bottom: 10px;
+  
+}
+
+.nave-box-1 {
+  display: flex;
+  flex-direction: row;
+  align-items: center;
+}
+
+.college-logo {
+  height: 40px;
+  width: 40px;
+  border-radius: 50%;
+  margin-right: 10px;
+}
+
+.college-name {
+  font-size: 1.2rem;
+  margin: 0;
+  color: #333;
+}
+
+.search-bar {
+  display: flex;
+  flex-grow: 1;
+  max-width: 500px;
+  padding: 5px 10px;
+  border: 1px solid #cccccc00;
+  border-radius: 50px;
+  background-color: none;
+  justify-content: center;
+  align-items: center;
+  font-size: 1rem;
+  margin: 0 20px;
+}
+
+.user-box {
+  padding: 0;
+  display: flex;
+  align-items: center;
+}
+
+.user-image {
+  height: 40px;
+  width: 40px;
+  border-radius: 50%;
+  margin-right: 10px;
+}
+
+.user-name {
+  font-size: 1rem;
+  color: #ffffff;
+}
+
+
+@media (max-width: 1024px) {
+  .navbar {
+    padding: 0 10px;
+  }
+
+  .search-bar {
+    margin: 0;
+  }
+}
+
+@media (max-width: 500px){
+  .user-box{
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+    align-items: center;
+  }
+}
+
+@media (max-width: 768px) {
+  .navbar {
+    
+    align-items: flex-start;
+    padding: 10px;
+  }
+
+  .nave-box-1 {
+    margin-bottom: 10px;
+  }
+
+  .search-bar {
+    margin: 0;
+  }
+
+  .user-box {
+    margin-top: 10px;
+  }
+
+  .user-section {
+    width: 100%;
+    justify-content: space-between;
+  }
+}
+
+@media (max-width: 480px) {
+  .college-name {
+    font-size: 1rem;
+  }
+
+  .search-bar {
+    font-size: 0.9rem;
+  }
+
+  .user-name {
+    font-size: 0.9rem;
+  }
+}
+
+
+/* Sidebar.css */
+.side-contents{
+  display: flex;
+}
+@media (max-width: 768px){
+  .side-contents{
+    flex-direction: column;
+  }
+}
+
+  
+
+.sidebar-container {
+  width: 10vw;
+  min-width: 200px;
+  height: 100vh;
+  background-color: #343a40;
+  color: white;
+  top: 0;
+  left: 0;
+  display: flex;
+  flex-direction: column;
+  padding: 10px;
+  box-shadow: 2px 0 5px rgba(0, 0, 0, 0.1);
+  transition: transform 0.3s ease;
+}
+
+.sidebar-item {
+  padding: 15px;
+  cursor: pointer;
+  border-radius: 4px;
+  transition: background-color 0.3s ease;
+}
+
+.sidebar-item:hover {
+  background-color: #495057;
+}
+
+.content-container {
+  margin-left: 5vw;
+  padding: 20px;
+  height: 100vh;
+  overflow-y: auto;
+  transition: margin-left 0.3s ease;
+}
+
+@media (max-width: 768px) {
+  .sidebar-container {
+    flex-direction: row;
+    height: 100vw;
+    width: 100vw;
+    height: auto;
+  }
+
+  .sidebar-container.open {
+    transform: translateX(0);
+  }
+
+  .content-container {
+    margin-left: 0;
+  }
+
+  .menu-button {
+    display: block;
+    font-size: 1.5rem;
+    cursor: pointer;
+    background: none;
+    border: none;
+    color: #333;
+    padding: 10px;
+    position: fixed;
+    top: 0;
+    left: 0;
+    z-index: 1000;
+  }
+}
+
+
+@media (max-width: 480px) {
+  .sidebar-container {
+    width: 200px;
+  }
+
+  .menu-button {
+    font-size: 1.2rem;
+  }
+}
+
+
+/* Dashboard.css */
+.dashboard-container {
+  display: flex;
+  flex-direction: row;
+  grid-template-columns: repeat(auto-fill, minmax(200px, 1fr));
+  gap: 20px;
+  padding: 20px;
+}
+
+.card {
+  background-color: #ffffff;
+  border: 1px solid #ddd;
+  border-radius: 8px;
+  padding: 20px;
+  box-shadow: 0 2px 5px rgba(0, 0, 0, 0.1);
+  text-align: center;
+  cursor: pointer;
+}
+
+.card h3 {
+  margin: 0;
+  font-size: 1.2rem;
+  color: #333;
+}
+
+.card p {
+  font-size: 2rem;
+  margin: 10px 0 0;
+  color: #007bff;
+}
+@media (max-width: 630px){
+  .dashboard-container{
+    display: flex;
+    flex-direction: column;
+  }
+} 
+
+@media (max-width: 768px) {
+  .dashboard-container {
+    grid-template-columns: 1fr 1fr;
+  }
+}
+
+@media (max-width: 480px) {
+  .dashboard-container {
+    grid-template-columns: 1fr;
+  }
+}
+
+
+
+/* Student.css */
+.student-container {
+  display: flex;
+  flex-direction: row;
+  grid-template-columns: repeat(auto-fill, minmax(200px, 1fr));
+  gap: 20px;
+  padding: 20px;
+}
+@media (max-width: 630px){
+  .student-container{
+    display: flex;
+    flex-direction: column;
+  }
+} 
+
+
+.student-card {
+  background-color: #ffffff;
+  border: 1px solid #ddd;
+  border-radius: 8px;
+  padding: 20px;
+  box-shadow: 0 2px 5px rgba(0, 0, 0, 0.1);
+  text-align: left;
+  cursor: pointer;
+}
+
+.student-card h3 {
+  margin: 0;
+  font-size: 1.2rem;
+  color: #333;
+}
+
+.student-card p {
+  margin: 10px 0;
+  font-size: 1rem;
+  color: #555;
+}
+
+.student-card strong {
+  color: #007bff;
+}
+
+@media (max-width: 768px) {
+  .student-container {
+    grid-template-columns: 1fr 1fr;
+  }
+}
+
+@media (max-width: 480px) {
+  .student-container {
+    grid-template-columns: 1fr;
+  }
+}
+
+
+/* Class.css */
+.class-container {
+  padding: 20px;
+  max-width: 600px;
+  margin: auto;
+}
+
+.class-container h2 {
+  text-align: center;
+  margin-bottom: 20px;
+}
+
+.class-form {
+  display: flex;
+  flex-direction: column;
+  gap: 15px;
+}
+
+.form-group {
+  display: flex;
+  flex-direction: column;
+}
+
+.form-group label {
+  margin-bottom: 5px;
+  font-weight: bold;
+  color: #333;
+}
+
+.form-group input {
+  padding: 10px;
+  border: 1px solid #ddd;
+  border-radius: 4px;
+}
+
+.submit-button {
+  padding: 10px;
+  border: none;
+  border-radius: 4px;
+  background-color: #007bff;
+  color: white;
+  font-size: 1rem;
+  cursor: pointer;
+  transition: background-color 0.3s ease;
+}
+
+.submit-button:hover {
+  background-color: #0056b3;
+}
+
+
+@media (max-width: 768px) {
+  .class-container {
+    padding: 15px;
+  }
+}
+
+@media (max-width: 480px) {
+  .class-form {
+    flex-direction: column;
+  }
+
+  .form-group input {
+    font-size: 0.9rem;
+  }
+
+  .submit-button {
+    font-size: 0.9rem;
+  }
+}
+
+
