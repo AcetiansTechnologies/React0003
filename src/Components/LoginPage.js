@@ -1,79 +1,91 @@
-import React from "react";
-import { Link } from "react-router-dom";
-import Home from "../Home/Home";
-const LoginPage = () => {
-  return (
-    <div className="body">
+import React, { useState } from 'react';
+import { useDispatch, useSelector } from 'react-redux';
+import { useNavigate } from 'react-router-dom';
+import { login } from '../redux/store'; // Adjust the import path if necessary
 
-        <div className="main-body">
-            <div className="login-box">
-                <div className="image">
-                     <img
-                    src="https://i.ibb.co/ZgWJrWL/Screenshot-2024-08-28-110736.png"
-                    alt="Screenshot-2024-08-28-110736"
-                    border="0"
-                    ></img>
+const LoginPage = () => {
+  const [email, setEmail] = useState('');
+  const [password, setPassword] = useState('');
+  const dispatch = useDispatch();
+  const navigate = useNavigate();
+  const isAuthenticated = useSelector((state) => state.isAuthenticated);
+  const errorMessage = useSelector((state) => state.errorMessage);
+
+  const handleSubmit = async (e) => {
+    e.preventDefault();
+    try {
+      await dispatch(login(email, password)); // Await the dispatch to ensure it completes
+      if (isAuthenticated) {
+        navigate('/home'); // Navigate only if authenticated
+      }
+    } catch (error) {
+      console.error('Login failed:', error);
+    }
+  };
+
+  return (
+    <div className="login-body">
+      <div className="main-body">
+        <div className="login-box">
+          <div className="image">
+            <img
+              src="https://i.ibb.co/ZgWJrWL/Screenshot-2024-08-28-110736.png"
+              alt="Screenshot"
+              border="0"
+            />
+          </div>
+          <form onSubmit={handleSubmit}>
+            <div className="Login-page">
+              <p className="login-text">Login</p>
+              <p className="under-login-text">See your Growth</p>
+
+              <div>
+                <div className="name-wrapper">
+                  <label className="name-label">Email </label>
+                  <input
+                    className="name-input"
+                    type="email"
+                    value={email}
+                    onChange={(e) => setEmail(e.target.value)}
+                    required
+                    placeholder="Enter your email"
+                  />
+                </div>
+                <div className="name-wrapper">
+                  <label className="name-label">Password</label>
+                  <input
+                    className="name-input"
+                    type="password"
+                    value={password}
+                    onChange={(e) => setPassword(e.target.value)}
+                    placeholder="Password"
+                    required
+                  />
+                </div>
+              </div>
+
+              <div className="forgot-box">
+                <div className="Checkbox">
+                  <input type="checkbox" className="checkbox" />
+                  <label className="checkbox-label">Remember me</label>
                 </div>
                 <div>
-                    <p className="login-text">Login</p>
-                    <p className="under-login-text">
-                    See your Grouth and Get consulting support
-                    </p>
-                    <div className="google-login-button">
-                    <button className="google-login">
-                        {" "}
-                        <img
-                        className="google-img"
-                        src="https://www.svgrepo.com/show/303108/google-icon-logo.svg"
-                        ></img>
-                        Sign in with Google
-                    </button>
-                    </div>
-
-                    <div className="email-box">
-                    <label>Email*</label>
-                    <input
-                        className="input-box"
-                        type="text"
-                        placeholder="mail@website.com"
-                    ></input>
-                    </div>
-                    <div className="pass-box">
-                    <label>Password*</label>
-                    <input
-                        className="input-box"
-                        type="text"
-                        placeholder="Min. 8 character"
-                    ></input>
-                    </div>
-
-                    <div className="forgat-box">
-                    <div>
-                        {" "}
-                        <input type="checkbox" className="checkbox"></input>
-                        <label className="checkbox">remember</label>
-                    </div>
-                    <div>
-                        <p>Forgat Password</p>
-                    </div>
-                    </div>
-
-                    <div>
-                    <Link className="input-box" to="/Home">
-                        Login
-                    </Link>
-                    </div>
+                  <p>Forgot Password</p>
                 </div>
-            </div>
+              </div>
 
-            <div className="Img">
-                <img
-                    className="Login-img"
-                    src='https://i.ibb.co/gmWpHHJ/Screenshot-2024-08-28-105538.png" alt="Screenshot-2024-08-28-105538'
-                ></img>
+              <div className="login-button-box">
+                <button className='Login-button' type="submit">Login</button>
+              </div>
             </div>
+          </form>
+          {errorMessage && <p style={{ color: 'red' }}>{errorMessage}</p>}
         </div>
+
+        <div className="Img"></div>
+      </div>
     </div>
-  )
-}
-export default LoginPage
+  );
+};
+
+export default LoginPage;

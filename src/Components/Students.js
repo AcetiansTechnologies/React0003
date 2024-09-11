@@ -3,7 +3,7 @@ import React from 'react';
 const student = [
   { name: 'Kabir', class: 'BCA', dob: '28-09-2000', section: 'B' },
   { name: 'Ojas', class: 'BCA', dob: '2005-07-22', section: 'B' },
-  { name: 'Prashansa ', class: 'BCA', dob: '17-08-2002', section: 'A' },
+  { name: 'Prashansa ', class: 'BCA', dob: '17-08-2002', section: 'B' },
 
 ];
 

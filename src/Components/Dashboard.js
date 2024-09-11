@@ -1,4 +1,5 @@
 import React from 'react';
+import NavBar from '../Home/NavBar';
 
 const Dashboard = () => {
   return (
@@ -20,8 +21,7 @@ const Dashboard = () => {
         <h3>Attendance Total</h3>
         <p>95%</p>
       </div>
-      </div>
-      
+      </div> 
   );
 };
 

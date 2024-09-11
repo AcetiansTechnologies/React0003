@@ -1,30 +1,18 @@
-import React, { useState, useEffect } from 'react';
+import React from 'react';
 
 
 const Attendance = () => {
-  const [studentName, setStudentName] = useState('');
-  const [currentDate, setCurrentDate] = useState('');
-  const [className, setClassName] = useState('');
-  const [status, setStatus] = useState('Present'); 
 
   
-  useEffect(() => {
-    const today = new Date().toISOString().split('T')[0];
-    setCurrentDate(today);
-  }, []);
-
- 
-
   return (
-    <div className="attendance-container">
+    <div className="class-container">
       <h2>Mark Attendance</h2>
-      <form  className="attendance-form">
+      <form className="class-form">
         <div className="form-group">
           <label htmlFor="studentName">Student Name:</label>
           <input
             type="text"
             id="studentName"
-            value={studentName}
             
             required
           />
@@ -34,8 +22,7 @@ const Attendance = () => {
           <input
             type="date"
             id="currentDate"
-            value={currentDate}
-         
+        
             required
           />
         </div>
@@ -44,8 +31,7 @@ const Attendance = () => {
           <input
             type="text"
             id="className"
-            value={className}
-          
+           
             required
           />
         </div>
@@ -57,7 +43,6 @@ const Attendance = () => {
                 type="radio"
                 name="status"
                 value="Present"
-                
                
               />
               Present
@@ -67,8 +52,7 @@ const Attendance = () => {
                 type="radio"
                 name="status"
                 value="Absent"
-                checked={status === 'Absent'}
-              
+             
               />
               Absent
             </label>
